@@ -4,6 +4,7 @@ defmodule Jason.EncoderTest do
   alias Jason.{EncodeError, Encoder}
 
   test "atom" do
+    assert to_json(:null) == "null"
     assert to_json(nil) == "null"
     assert to_json(true) == "true"
     assert to_json(false) == "false"

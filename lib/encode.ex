@@ -111,6 +111,7 @@ defmodule Jason.Encode do
     encode_atom(atom, escape)
   end
 
+  defp encode_atom(:null, _escape), do: "null"
   defp encode_atom(nil, _escape), do: "null"
   defp encode_atom(true, _escape), do: "true"
   defp encode_atom(false, _escape), do: "false"
